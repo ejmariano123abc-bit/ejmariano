@@ -1,0 +1,40 @@
+		<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volumetric Thermal Expansion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Volumetric Thermal Expansion</h1>
+
+        <p class="description">
+            Calculate the final volume of a material after temperature change.
+        </p>
+
+        <div class="formula">
+            ΔV = β × V₀ × ΔT
+        </div>
+
+        <div class="calculator">
+            <input type="number" id="volume" placeholder="Original Volume (V₀)">
+            
+            <input type="number" id="beta" placeholder="Expansion Coefficient (β)">
+            
+            <input type="number" id="temp" placeholder="Temperature Change (ΔT)">
+            
+            <button onclick="calculateExpansion()">
+                Calculate
+            </button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

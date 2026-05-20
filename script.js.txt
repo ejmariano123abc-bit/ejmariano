@@ -1,0 +1,20 @@
+// script.js
+
+function calculateExpansion(){
+
+    let V0 = parseFloat(document.getElementById("volume").value);
+    let beta = parseFloat(document.getElementById("beta").value);
+    let deltaT = parseFloat(document.getElementById("temp").value);
+
+    if(isNaN(V0) || isNaN(beta) || isNaN(deltaT)){
+        document.getElementById("result").innerHTML =
+        "Please fill all fields.";
+        return;
+    }
+
+    let deltaV = beta * V0 * deltaT;
+    let finalVolume = V0 + deltaV;
+
+    document.getElementById("result").innerHTML =
+    "Final Volume = " + finalVolume.toFixed(2);
+}
